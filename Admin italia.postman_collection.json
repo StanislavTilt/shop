@@ -1541,6 +1541,135 @@
 					"name": "orders",
 					"item": [
 						{
+							"name": "current orders by status",
+							"item": [
+								{
+									"name": "completed",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{API_URL}}api/admin/orders/by-status/completed",
+											"host": [
+												"{{API_URL}}api"
+											],
+											"path": [
+												"admin",
+												"orders",
+												"by-status",
+												"completed"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "declined",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{API_URL}}api/admin/orders/by-status/declined",
+											"host": [
+												"{{API_URL}}api"
+											],
+											"path": [
+												"admin",
+												"orders",
+												"by-status",
+												"declined"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "new",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{API_URL}}api/admin/orders/by-status/new",
+											"host": [
+												"{{API_URL}}api"
+											],
+											"path": [
+												"admin",
+												"orders",
+												"by-status",
+												"new"
+											]
+										}
+									},
+									"response": []
+								},
+								{
+									"name": "on the way",
+									"request": {
+										"method": "GET",
+										"header": [
+											{
+												"key": "Accept",
+												"value": "application/json",
+												"type": "text"
+											},
+											{
+												"key": "Content-Type",
+												"value": "application/json",
+												"type": "text"
+											}
+										],
+										"url": {
+											"raw": "{{API_URL}}api/admin/orders/by-status/on-the-way",
+											"host": [
+												"{{API_URL}}api"
+											],
+											"path": [
+												"admin",
+												"orders",
+												"by-status",
+												"on-the-way"
+											]
+										}
+									},
+									"response": []
+								}
+							]
+						},
+						{
 							"name": "get all",
 							"request": {
 								"method": "GET",
@@ -3773,8 +3902,13 @@
 										},
 										{
 											"key": "products_ids[0]",
-											"value": "96",
+											"value": "2",
 											"description": "required|integer|exists:products,id|unique:promotion_products,id",
+											"type": "text"
+										},
+										{
+											"key": "products_ids[1]",
+											"value": "1",
 											"type": "text"
 										}
 									]
@@ -4224,7 +4358,7 @@
 									"formdata": [
 										{
 											"key": "phone",
-											"value": "89998887766",
+											"value": "123123121",
 											"type": "text"
 										},
 										{
